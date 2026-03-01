@@ -2,6 +2,9 @@
 
 This project predicts wine quality using a full machine learning pipeline and a small Flask app for online predictions.
 
+## Description
+End-to-end wine quality prediction project with a structured ML pipeline, MLflow tracking on DagsHub, and a Flask interface for real-time predictions.
+
 It was built to show practical MLOps flow in a simple way:
 - data ingestion
 - data validation
@@ -25,10 +28,21 @@ The goal is to estimate wine quality (`quality`) from physicochemical features s
 - Python
 - pandas, numpy
 - scikit-learn
+- Model used in training: **ElasticNet Regressor** (`sklearn.linear_model.ElasticNet`)
 - Flask
 - MLflow
 - DagsHub (tracking backend)
 - joblib / YAML config system
+
+## Model Details
+- Algorithm: ElasticNet (regression)
+- Hyperparameters source: `params.yaml`
+  - `alpha`
+  - `l1_ratio`
+- Evaluation metrics logged:
+  - RMSE
+  - MAE
+  - R2
 
 ## Project Structure
 ```text
